@@ -1,2 +1,3 @@
-# python-otel-demo-service
+# OpenTelemetry observable Python Service
+
 A simplistic service written in Python that is observable through OpenTelemetry
