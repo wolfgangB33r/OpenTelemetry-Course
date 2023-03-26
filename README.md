@@ -1,4 +1,4 @@
-# OpenTelemetry observable Python Service
+# OpenTelemetry Course Example
 
 Within this exercise course you will learn how to use OpenTelemetry to instrument and observe a
 simplistic service written in Python.
@@ -21,16 +21,7 @@ over instrumenting the service with OpenTelemetry until deploying and running it
 
 
 
-## Dependencies
 
-- Flask (pip install flask)
-- opentelemetry-api
-- opentelemetry-sdk
-
-pip install opentelemetry-api
-pip install opentelemetry-sdk
-pip install opentelemetry-exporter-otlp
-pip install Flask
 
 ## Pull the Docker image within Google Cloud
 
