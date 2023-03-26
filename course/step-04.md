@@ -22,6 +22,8 @@ export OTEL_EXPORTER_OTLP_TRACES_HEADERS="Authorization=Api-Token%20<YOUR_DYNATR
 The instrumentation code of the Flask application has been modified to not only send the spans to the local
 console but also to a OLTP span exporter.
 
+Be aware that the value of the headers environment variable in OTEL_EXPORTER_OTLP_TRACES_HEADERS needs to be URL encoded, which means that the space character between Api-Token and the secret needs to be replaces with '%20'!
+
 ```python
 from flask import Flask
 import json
