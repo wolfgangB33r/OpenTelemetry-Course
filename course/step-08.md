@@ -2,7 +2,9 @@
 
 The Flusk Docker image is now registered in the Docker repository of your Google Cloud project. In order to deploy the Flusk app and to send telemetry data to an OpenTelemetry endpoint this step will use Google Cloud Run to instantiate a service.
 
-Open your Google project within Google Cloud and navigate to Cloud Run. Create a new service and select your Flusk app Docker image from the projects Docker registry.
+Open your Google project within Google Cloud and navigate to Cloud Run. Create a new service and select your Flusk app Docker image from the projects Docker registry, as it is shown below:
+
+![Select Docker image](./screenshots/gcp-select-image.png)
 
 Under the service's container configuration tab, set the container port to 5000 and add the two environment variables for redirecting the OpenTelemetry receiver:
 
