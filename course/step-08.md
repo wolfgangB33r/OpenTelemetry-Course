@@ -13,4 +13,11 @@ OTEL_EXPORTER_OTLP_TRACES_ENDPOINT=https://<YOUR_DYNATRACE_ID>.live.dynatrace.co
 OTEL_EXPORTER_OTLP_TRACES_HEADERS="Authorization=Api-Token%20<YOUR_DYNATRACE_API_TOKEN>"
 ```
 
-Once the newly created service is up and running in Google Cloud Run, you can access the service through the service endpoint and you will see the OpenTelemetry console export within the services logs tab and you should also receive the traces within your Dynatrace environment.
+Once the newly created service is up and running in Google Cloud Run, you can access the service through the service endpoint and you will see the OpenTelemetry console export within the services logs tab, as shown below:
+
+![Otel console log in GCP](./screenshots/gcp-service-otel-console-logs.png)
+
+Within your configured Dynatrace environment you should now also receive the traces as the two Dynatrace screenshots show below.
+
+![List of traces in Dynatrace](./screenshots/otel-traces-dynatrace.png)
+![OpenTelemetry trace details in Dynatrace](./screenshots/otel-traces-dynatrace-details.png)
