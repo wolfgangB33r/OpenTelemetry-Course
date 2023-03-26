@@ -13,15 +13,5 @@ over instrumenting the service with OpenTelemetry until deploying and running it
 4. [Configure OpenTelemetry to export to Dynatrace](./course/step-04.md)
 5. [Build a Docker container](./course/step-05.md)
 6. [Upload the Docker image to Dockerhub](./course/step-06.md)
-7. Pull the image in Google Cloud
-8. Deploy and run the service in Google Cloud
-
-## Pull the Docker image within Google Cloud
-
-Pull image in Google Cloud:
-
-- Open Google Cloud Shell in a browser
-- docker pull wolfgangb33r/python-otel-demo-service
-- docker images
-- docker tag ff3? gcr.io/{project-id}/python-otel-demo-service // project id is the Google Cloud project id from URL
-- docker push gcr.io/{project-id}/python-otel-demo-service
+7. [Pull the image in Google Cloud](./course/step-07.md)
+8. [Deploy and run the service in Google Cloud](./course/step-08.md)
