@@ -95,3 +95,8 @@ def products():
         }
         return json.dumps(ret)
 ```
+
+Within your configured Dynatrace environment you should now receive all traces as it is shown within the screenshots below.
+
+![List of traces in Dynatrace](./screenshots/otel-traces-dynatrace.png)
+![OpenTelemetry trace details in Dynatrace](./screenshots/otel-traces-dynatrace-details.png)
