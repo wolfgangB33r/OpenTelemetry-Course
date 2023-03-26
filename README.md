@@ -10,16 +10,45 @@ over instrumenting the service with OpenTelemetry until deploying and running it
 1. [Implement a Python service with Flusk](./course/step-01.md)
 2. [Instrument your app with OpenTelemetry](./course/step-02.md)
 3. [Export traces into a local file](./course/step-03.md)
-4. Build a Docker container
-5. Upload the Docker image to Dockerhub
-6. Pull the image in Google Cloud
-7. Deploy and run the service in Google Cloud
-8. Configure the service to send OpenTelemetry to Dynatrace
+4. Configure OpenTelemetry to export to Dynatrace
+5. Build a Docker container
+6. Upload the Docker image to Dockerhub
+7. Pull the image in Google Cloud
+8. Deploy and run the service in Google Cloud
 
 
+## Send to Dynatrace
 
+// export OTEL_EXPORTER_OTLP_TRACES_ENDPOINT=https://<YOUR>.live.dynatrace.com/api/v2/otlp
+// export OTEL_EXPORTER_OTLP_TRACES_HEADERS="Authorization=Api-Token <YOUR_TOKEN>"
 
+You can configure the exporter with the following environment variables:
 
+https://opentelemetry-python.readthedocs.io/en/latest/exporter/otlp/otlp.html
+
+OTEL_EXPORTER_OTLP_TRACES_TIMEOUT
+
+OTEL_EXPORTER_OTLP_TRACES_PROTOCOL
+
+OTEL_EXPORTER_OTLP_TRACES_HEADERS
+
+OTEL_EXPORTER_OTLP_TRACES_ENDPOINT
+
+OTEL_EXPORTER_OTLP_TRACES_COMPRESSION
+
+OTEL_EXPORTER_OTLP_TRACES_CERTIFICATE
+
+OTEL_EXPORTER_OTLP_TIMEOUT
+
+OTEL_EXPORTER_OTLP_PROTOCOL
+
+OTEL_EXPORTER_OTLP_HEADERS
+
+OTEL_EXPORTER_OTLP_ENDPOINT
+
+OTEL_EXPORTER_OTLP_COMPRESSION
+
+OTEL_EXPORTER_OTLP_CERTIFICATE
 
 
 

@@ -8,7 +8,7 @@ from opentelemetry.sdk.trace import TracerProvider
 from opentelemetry.sdk.trace.export import (
     BatchSpanProcessor,
     ConsoleSpanExporter,
-    OTLPSpanExporter
+    #OTLPSpanExporter
 )
 
 from opentelemetry.sdk.resources import Resource
@@ -17,8 +17,15 @@ trace_provider = TracerProvider(resource=Resource.create({
             "service.name": "shoppingcart",
             "service.instance.id": "instance-12",
         }),)
+
+# Processor for console export
 processor = BatchSpanProcessor(ConsoleSpanExporter())
 trace_provider.add_span_processor(processor)
+
+# Processor for OTLP export
+otlp_exporter = OTLPSpanExporter()
+otlp_span_processor = BatchSpanProcessor(otlp_exporter)
+trace_provider.add_span_processor(otlp_span_processor)
 
 # Sets the global default tracer provider
 trace.set_tracer_provider(trace_provider)
