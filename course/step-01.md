@@ -44,9 +44,11 @@ def products():
 ## Run your Python Flask app
 
 To run the Flask app locally, you first need to export the application name as shown below and then run the app with the command flask run.
-  
+
+```bash
 export FLASK_APP=app
 flask run
+```
 
 On the console Flask informs about the local Web address serving its content.
 
