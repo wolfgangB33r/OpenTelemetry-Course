@@ -68,4 +68,5 @@ After instrumenting the Flask app code you can open a local Web browser, load th
 }
 ```
 
-With that the instrumenting of the Flask app is finished. Within the next step this application will be transformed into a Docker container so that it can be deployed in any containerized cloud environment (AWS, Azure, GCP).
+With that the instrumenting of the Flask app is finished.
+The next step will show how to flexibly configure the OpenTelemetry exporter to send observed spans to any telemetry backend by using environment variables.
