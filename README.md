@@ -10,7 +10,7 @@ over instrumenting the service with OpenTelemetry until deploying and running it
 1. [Implement a Python service with Flusk](./course/step-01.md)
 2. [Instrument your app with OpenTelemetry](./course/step-02.md)
 3. [Export traces into a local file](./course/step-03.md)
-4. Configure OpenTelemetry to export to Dynatrace
+4. [Configure OpenTelemetry to export to Dynatrace](./course/step-04.md)
 5. Build a Docker container
 6. Upload the Docker image to Dockerhub
 7. Pull the image in Google Cloud
