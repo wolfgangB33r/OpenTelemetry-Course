@@ -43,3 +43,7 @@ jobs:
         run: echo ${{ steps.docker_build.outputs.digest }}
 
 ```
+
+The GitHub action automatically builds, tags and pushes the Docker image to Dockerhub as it is shown within the screenshot below:
+
+![Flusk app as Docker image in Dockerhub](./screenshots/otel-service-dockerhub.png)
