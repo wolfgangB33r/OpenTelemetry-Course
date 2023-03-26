@@ -6,12 +6,18 @@ Open your Google project within Google Cloud and navigate to Cloud Run. Create a
 
 ![Select Docker image](./screenshots/gcp-select-image.png)
 
-Under the service's container configuration tab, set the container port to 5000 and add the two environment variables for redirecting the OpenTelemetry receiver:
+Under the service's container configuration tab, set the container port to 5000, as it is shown below:
+
+![Configure the Flusk app port](./screenshots/gcp-cloud-run-set-port.png)
+
+Then add the two environment variables for redirecting the OpenTelemetry receiver:
 
 ```bash
 OTEL_EXPORTER_OTLP_TRACES_ENDPOINT=https://<YOUR_DYNATRACE_ID>.live.dynatrace.com/api/v2/otlp/v1/traces
 OTEL_EXPORTER_OTLP_TRACES_HEADERS="Authorization=Api-Token%20<YOUR_DYNATRACE_API_TOKEN>"
 ```
+
+![Configure the OpenTelemetry receiver environment variables](./screenshots/gcp-cloud-run-configure-otel-receivers.png)
 
 Once the newly created service is up and running in Google Cloud Run, you can access the service through the service endpoint and you will see the OpenTelemetry console export within the services logs tab, as shown below:
 
