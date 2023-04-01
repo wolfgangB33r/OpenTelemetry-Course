@@ -1,9 +1,8 @@
 # OpenTelemetry Course
 
-Within this course you will learn how to use OpenTelemetry to instrument and observe a
-simplistic service written in Python.
-The course is organized in a step-by-step tutorial to guide readers from building the Python service,
-over instrumenting the service with OpenTelemetry until deploying and running it within Google Cloud.
+This course shows how to use OpenTelemetry to instrument and observe a simple Python service.
+The course is organized as a step-by-step tutorial to guide readers from implementing the Python service,
+instrumenting the service with OpenTelemetry and finally deploying and running the service within Google Cloud Run.
 
 ## Course outline
 
