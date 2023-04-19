@@ -7,6 +7,7 @@ imported by using the pip statements shown below:
 ```bash
 pip install opentelemetry-api
 pip install opentelemetry-sdk
+pip install opentelemetry-exporter
 ```
 
 Once the OpenTelemetry packages are successfully installed, the instrumentation of your service code can be done.
