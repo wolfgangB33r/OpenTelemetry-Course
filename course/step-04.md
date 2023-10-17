@@ -12,11 +12,18 @@ In that way, you can flexibly set and change the receiver of the OpenTelemetry i
 deployment of your application without the need to change the applications instrumentation code.
 
 Use the environment variables 'OTEL_EXPORTER_OTLP_TRACES_ENDPOINT' and 'OTEL_EXPORTER_OTLP_TRACES_HEADERS' to define where the spans should be sent to.
-See an example below that shows how to set a Dynatrace environment to receive the OpenTelemetry spans:
+See an example below that shows how to set a Dynatrace environment on Linux to receive the OpenTelemetry spans:
 
 ```bash
 export OTEL_EXPORTER_OTLP_TRACES_ENDPOINT=https://<YOUR_DYNATRACE_ID>.live.dynatrace.com/api/v2/otlp/v1/traces
 export OTEL_EXPORTER_OTLP_TRACES_HEADERS="Authorization=Api-Token%20<YOUR_DYNATRACE_API_TOKEN>"
+```
+
+See an example below that shows how to set a Dynatrace environment on Windows to receive the OpenTelemetry spans:
+
+```bash
+set OTEL_EXPORTER_OTLP_TRACES_ENDPOINT=https://<YOUR_DYNATRACE_ID>.live.dynatrace.com/api/v2/otlp/v1/traces
+set OTEL_EXPORTER_OTLP_TRACES_HEADERS="Authorization=Api-Token%20<YOUR_DYNATRACE_API_TOKEN>"
 ```
 
 The instrumentation code of the Flask application has been modified to not only send the spans to the local
