@@ -1,4 +1,4 @@
-# Implement a Python service with Flusk
+# Implement a Python service with Flask
 
 The first step within our course is to implement a simplistic service in Python that opens a port and serves a simple JSON through HTTP protocol.
 The convenient [Flask web framework](https://flask.palletsprojects.com/en/2.2.x/) helps to serve Python microservice endpoints.
