@@ -17,32 +17,25 @@ Import statements as well as the creation of the trace provider are added at the
 from flask import Flask
 import json
 
+# Otel
 from opentelemetry import trace
+from opentelemetry.sdk.resources import Resource
 from opentelemetry.sdk.trace import TracerProvider
 from opentelemetry.sdk.trace.export import (
    BatchSpanProcessor,
    ConsoleSpanExporter,
 )
-
-
-from opentelemetry.sdk.resources import Resource
-
-
 trace_provider = TracerProvider(resource=Resource.create({
            "service.name": "shoppingcart",
            "service.instance.id": "instance-12",
        }),)
 processor = BatchSpanProcessor(ConsoleSpanExporter())
 trace_provider.add_span_processor(processor)
-
-
 # Sets the global default tracer provider
 trace.set_tracer_provider(trace_provider)
-
-
 # Creates a tracer from the global tracer provider
 tracer = trace.get_tracer(__name__)
-
+# End Otel init
 
 app = Flask(__name__)
 
