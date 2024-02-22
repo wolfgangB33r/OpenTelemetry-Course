@@ -16,14 +16,14 @@ See an example below that shows how to set a Dynatrace environment on Linux to r
 
 ```bash
 export OTEL_EXPORTER_OTLP_TRACES_ENDPOINT=https://<YOUR_DYNATRACE_ID>.live.dynatrace.com/api/v2/otlp/v1/traces
-export OTEL_EXPORTER_OTLP_TRACES_HEADERS=Authorization=Api-Token%20<YOUR_DYNATRACE_API_TOKEN>
+export OTEL_EXPORTER_OTLP_TRACES_HEADERS="Authorization=Api-Token%20<YOUR_DYNATRACE_API_TOKEN>"
 ```
 
 See an example below that shows how to set a Dynatrace environment on Windows to receive the OpenTelemetry spans:
 
 ```bash
 set OTEL_EXPORTER_OTLP_TRACES_ENDPOINT=https://<YOUR_DYNATRACE_ID>.live.dynatrace.com/api/v2/otlp/v1/traces
-set OTEL_EXPORTER_OTLP_TRACES_HEADERS="Authorization=Api-Token%20<YOUR_DYNATRACE_API_TOKEN>"
+set OTEL_EXPORTER_OTLP_TRACES_HEADERS=Authorization=Api-Token%20<YOUR_DYNATRACE_API_TOKEN>
 ```
 
 The instrumentation code of the Flask application has been modified to not only send the spans to the local
