@@ -8,6 +8,7 @@ imported by using the pip statements shown below:
 pip install opentelemetry-api
 pip install opentelemetry-sdk
 pip install opentelemetry-exporter
+pip install opentelemetry-exporter-otlp-proto-http
 ```
 
 Once the OpenTelemetry packages are successfully installed, the instrumentation of your service code can be done.
